@@ -1,1 +1,91 @@
 
+# System Identification — Active Suspension
+
+Project for the **System Identification** course, Faculty of Automation and Computer Science, Technical University of Cluj-Napoca.
+
+The goal is to identify a second-order system with complex conjugate poles (the model of an active suspension) from input/output data obtained from a Simulink model. Each chapter solves the same problem with a different method; the resulting models are then rebuilt (transfer function and state space) and validated.
+
+The documentation of every chapter is available in both **Romanian** and **English**.
+
+## Project status
+
+| # | Chapter | Part | Status |
+|---|---------|------|--------|
+| 1 | `1.Regression_Method` — linear regression (step response) | Non-parametric | Done |
+| 2 | `2.Chirp_Method` — chirp signal (frequency response) | Non-parametric | Done |
+| 3 | `3.Parametric_Method_1` | Parametric | In progress |
+| 4 | `4.Parametric_Method_2` | Parametric | In progress |
+| 5 | `5.Parametric_Method_3` | Parametric | In progress |
+
+The names of folders 3–5 are placeholders and will be renamed once the methods are decided.
+
+## Repository structure
+
+```
+.
+├── README.md
+├── 1.Regression_Method/
+│   ├── Docs/
+│   │   ├── RO/      # documentation in Romanian (.docx / .pdf)
+│   │   └── EN/      # documentation in English (.docx / .pdf)
+│   ├── Matlab/      # MATLAB source code
+│   ├── Data/        # experimental data (u, y, t)
+│   └── Figures/     # plots used in the documentation
+├── 2.Chirp_Method/
+│   ├── Docs/
+│   │   ├── RO/
+│   │   └── EN/
+│   ├── Matlab/
+│   ├── Data/
+│   └── Figures/
+├── 3.Parametric_Method_1/   # in progress
+├── 4.Parametric_Method_2/   # in progress
+├── 5.Parametric_Method_3/   # in progress
+└── Docs_Final/
+    ├── RO/          # final document with all chapters and table of contents
+    └── EN/
+```
+
+Every chapter has the same internal layout, so the chapters can be browsed and merged into the final documents easily.
+
+## Identified model
+
+Second-order transfer function with complex conjugate poles:
+
+$$H(s) = \frac{K\,\omega_n^2}{s^2 + 2\zeta\omega_n s + \omega_n^2}$$
+
+Three parameters are determined: the proportionality constant $K$, the natural frequency $\omega_n$ and the damping ratio $\zeta$. The model is then simulated with `lsim`, both as a transfer function and in state space.
+
+## Methods
+
+**1. Linear regression (step response).** $K$ is obtained from the ratio between the output and input variations in steady state. From the damped oscillations, taking the logarithm gives a straight line $\ln(y(t) - y_{st}) = \alpha t + C$, where $\alpha = -\zeta\omega_n$ is found by linear regression. The imaginary part of the poles follows from the oscillation period.
+
+**2. Chirp signal (frequency response).** The frequency range of the chirp is calibrated first. Then $K$ is read at low frequencies, and $\zeta$ and $\omega_n$ are computed from the resonance peak and the resonance frequency:
+
+$$\zeta = \sqrt{\frac{1 - \sqrt{1 - (K/M_r)^2}}{2}}, \qquad \omega_n = \frac{\omega_r}{\sqrt{1 - 2\zeta^2}}$$
+
+## Validation
+
+The models are compared with the measured output using two performance indices:
+
+$$J = \frac{\lVert\varepsilon\rVert_2}{\sqrt{N}}, \qquad \varepsilon_{MPN} = \frac{\lVert\varepsilon\rVert_2}{\lVert y - \bar{y}\rVert_2}$$
+
+The measured output is additionally filtered with a 2nd-order Butterworth filter and a moving average. The required threshold for $\varepsilon_{MPN}$ is 10%.
+
+## Results so far
+
+| Chapter | Identified parameters | $\varepsilon_{MPN}$, state space | $\varepsilon_{MPN}$, transfer function |
+|---------|-----------------------|----------------------------------|----------------------------------------|
+| 1. Linear regression | — | 1.25% (Butterworth) | ≈ 40% |
+| 2. Chirp | K = 0.0066, ζ = 0.2008, ωn = 4.5443 | 3.20% (Butterworth), 2.82% (moving average) | ≈ 14% |
+
+The larger error of the transfer-function model comes from the initial conditions: `lsim` starts from zero by default, while in state space the initial condition is set explicitly.
+
+## Requirements
+
+- MATLAB with the *Control System Toolbox* (`tf`, `ss`, `lsim`) and the *Signal Processing Toolbox* (`butter`, `filtfilt`).
+- The data must be loaded into the workspace before running, as the variables `u`, `y`, `t` and the sampling period `Ts`.
+
+## Author
+
+Pop Raul — Automatics and Applied Informatics, group 30135.
