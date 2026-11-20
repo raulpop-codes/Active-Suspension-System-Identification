@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B2018"/>
+      <stop offset="55%" stop-color="#113524"/>
+      <stop offset="100%" stop-color="#0D2B1F"/>
+    </linearGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.4" fill="#3FB27F" fill-opacity="0.16"/>
+    </pattern>
+    <clipPath id="clip"><rect width="1200" height="320" rx="16"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#clip)">
+    <rect width="1200" height="320" fill="url(#bg)"/>
+    <rect width="1200" height="320" fill="url(#dots)"/>
+
+    <!-- step response of an underdamped second-order system -->
+    <g>
+      <!-- axes -->
+      <path d="M 892 58 V 254 H 1164" stroke="#2A7D5A" stroke-width="1.4" stroke-opacity="0.55"/>
+      <!-- input step -->
+      <path d="M 892 242 H 904 V 132 H 1160" stroke="#2A7D5A" stroke-width="2" stroke-opacity="0.6" stroke-dasharray="6 6" stroke-linecap="round"/>
+      <!-- exponential envelope (regression on peaks) -->
+      <path d="M 937.5 76.2 L 939.4 78.4 L 941.4 80.5 L 943.4 82.5 L 945.4 84.5 L 947.3 86.3 L 949.3 88.1 L 951.3 89.8 L 953.2 91.5 L 955.2 93.1 L 957.2 94.6 L 959.1 96.1 L 961.1 97.5 L 963.1 98.8 L 965.0 100.1 L 967.0 101.4 L 969.0 102.6 L 971.0 103.7 L 972.9 104.8 L 974.9 105.9 L 976.9 106.9 L 978.8 107.9 L 980.8 108.9 L 982.8 109.8 L 984.7 110.6 L 986.7 111.5 L 988.7 112.3 L 990.6 113.1 L 992.6 113.8 L 994.6 114.5 L 996.6 115.2 L 998.5 115.9 L 1000.5 116.5 L 1002.5 117.1 L 1004.4 117.7 L 1006.4 118.2 L 1008.4 118.8 L 1010.3 119.3 L 1012.3 119.8 L 1014.3 120.3 L 1016.2 120.7 L 1018.2 121.2 L 1020.2 121.6 L 1022.2 122.0 L 1024.1 122.4 L 1026.1 122.8 L 1028.1 123.1 L 1030.0 123.5 L 1032.0 123.8 L 1034.0 124.1 L 1035.9 124.4 L 1037.9 124.7 L 1039.9 125.0 L 1041.8 125.3 L 1043.8 125.6 L 1045.8 125.8 L 1047.8 126.1 L 1049.7 126.3 L 1051.7 126.5 L 1053.7 126.7 L 1055.6 126.9 L 1057.6 127.1 L 1059.6 127.3 L 1061.5 127.5 L 1063.5 127.7 L 1065.5 127.9 L 1067.4 128.0 L 1069.4 128.2 L 1071.4 128.3 L 1073.4 128.5 L 1075.3 128.6 L 1077.3 128.7 L 1079.3 128.9 L 1081.2 129.0 L 1083.2 129.1 L 1085.2 129.2 L 1087.1 129.3 L 1089.1 129.4 L 1091.1 129.5 L 1093.0 129.6 L 1095.0 129.7 L 1097.0 129.8 L 1099.0 129.9 L 1100.9 130.0 L 1102.9 130.1 L 1104.9 130.1 L 1106.8 130.2 L 1108.8 130.3 L 1110.8 130.3 L 1112.7 130.4 L 1114.7 130.5 L 1116.7 130.5 L 1118.6 130.6 L 1120.6 130.6 L 1122.6 130.7 L 1124.6 130.8 L 1126.5 130.8 L 1128.5 130.8 L 1130.5 130.9 L 1132.4 130.9 L 1134.4 131.0 L 1136.4 131.0 L 1138.3 131.1 L 1140.3 131.1 L 1142.3 131.1 L 1144.2 131.2 L 1146.2 131.2 L 1148.2 131.2 L 1150.2 131.3 L 1152.1 131.3 L 1154.1 131.3 L 1156.1 131.3 L 1158.0 131.4 L 1160.0 131.4"
+            stroke="#3FB27F" stroke-opacity="0.35" stroke-width="1.8" stroke-dasharray="3 6" stroke-linecap="round"/>
+      <!-- output -->
+      <path d="M 904.0 242.0 L 906.0 239.9 L 907.9 233.8 L 909.9 224.2 L 911.9 211.9 L 913.8 197.4 L 915.8 181.6 L 917.8 165.1 L 919.8 148.6 L 921.7 132.7 L 923.7 118.0 L 925.7 105.0 L 927.6 94.0 L 929.6 85.3 L 931.6 79.1 L 933.5 75.3 L 935.5 74.1 L 937.5 75.1 L 939.4 78.3 L 941.4 83.2 L 943.4 89.7 L 945.4 97.3 L 947.3 105.6 L 949.3 114.3 L 951.3 123.0 L 953.2 131.4 L 955.2 139.2 L 957.2 146.0 L 959.1 151.9 L 961.1 156.5 L 963.1 159.8 L 965.0 161.8 L 967.0 162.5 L 969.0 162.0 L 971.0 160.4 L 972.9 157.8 L 974.9 154.4 L 976.9 150.4 L 978.8 146.0 L 980.8 141.5 L 982.8 136.9 L 984.7 132.5 L 986.7 128.4 L 988.7 124.7 L 990.6 121.6 L 992.6 119.2 L 994.6 117.4 L 996.6 116.3 L 998.5 115.9 L 1000.5 116.2 L 1002.5 117.0 L 1004.4 118.4 L 1006.4 120.1 L 1008.4 122.2 L 1010.3 124.5 L 1012.3 126.9 L 1014.3 129.4 L 1016.2 131.7 L 1018.2 133.9 L 1020.2 135.8 L 1022.2 137.4 L 1024.1 138.7 L 1026.1 139.7 L 1028.1 140.2 L 1030.0 140.5 L 1032.0 140.3 L 1034.0 139.9 L 1035.9 139.2 L 1037.9 138.3 L 1039.9 137.2 L 1041.8 136.0 L 1043.8 134.7 L 1045.8 133.4 L 1047.8 132.2 L 1049.7 131.1 L 1051.7 130.0 L 1053.7 129.2 L 1055.6 128.5 L 1057.6 128.0 L 1059.6 127.7 L 1061.5 127.5 L 1063.5 127.6 L 1065.5 127.8 L 1067.4 128.2 L 1069.4 128.7 L 1071.4 129.3 L 1073.4 129.9 L 1075.3 130.6 L 1077.3 131.2 L 1079.3 131.9 L 1081.2 132.5 L 1083.2 133.0 L 1085.2 133.5 L 1087.1 133.8 L 1089.1 134.1 L 1091.1 134.3 L 1093.0 134.3 L 1095.0 134.3 L 1097.0 134.2 L 1099.0 134.0 L 1100.9 133.8 L 1102.9 133.5 L 1104.9 133.1 L 1106.8 132.8 L 1108.8 132.4 L 1110.8 132.1 L 1112.7 131.8 L 1114.7 131.5 L 1116.7 131.2 L 1118.6 131.0 L 1120.6 130.9 L 1122.6 130.8 L 1124.6 130.8 L 1126.5 130.8 L 1128.5 130.8 L 1130.5 130.9 L 1132.4 131.1 L 1134.4 131.2 L 1136.4 131.4 L 1138.3 131.6 L 1140.3 131.8 L 1142.3 132.0 L 1144.2 132.1 L 1146.2 132.3 L 1148.2 132.4 L 1150.2 132.5 L 1152.1 132.6 L 1154.1 132.6 L 1156.1 132.6 L 1158.0 132.6 L 1160.0 132.6"
+            stroke="#3FB27F" stroke-opacity="0.75" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- identified peaks -->
+      <g fill="#3FB27F" fill-opacity="0.85">
+        <circle cx="935.6" cy="74.1" r="4.5"/>
+        <circle cx="967.1" cy="162.5" r="4.5"/>
+        <circle cx="998.7" cy="115.9" r="4.5"/>
+        <circle cx="1030.3" cy="140.5" r="4.5"/>
+        <circle cx="1061.9" cy="127.5" r="4.5"/>
+      </g>
+    </g>
+
+    <rect x="80" y="68" width="64" height="4" rx="2" fill="#3FB27F"/>
+
+    <text x="80" y="152" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="62" font-weight="700" fill="#FFFFFF" letter-spacing="-1">System Identification</text>
+
+    <text x="80" y="198" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="25" font-weight="600" fill="#3FB27F">Building dynamic models from input/output data</text>
+
+    <text x="80" y="234" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="17" fill="#8FBFA9">Non-parametric and parametric methods &#183; validated in TF and state space</text>
+
+    <text x="80" y="272" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" fill="#5E9078" letter-spacing="0.5">MATLAB  &#183;  Simulink  &#183;  Control System Toolbox  &#183;  Signal Processing</text>
+
+    <rect x="0.75" y="0.75" width="1198.5" height="318.5" rx="16" stroke="#2A7D5A" stroke-opacity="0.5" stroke-width="1.5"/>
+  </g>
+</svg>
