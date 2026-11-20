@@ -1,4 +1,11 @@
-# System Identification — Active Suspension
+<p align="center">
+  <img src="assets/banner.svg" alt="System Identification" width="100%">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/MATLAB-113524?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZD0iTTIgMjAgQzUgMjAgNSA0IDggNCBTMTEgMTYgMTMgMTYgUzE2IDkgMTggOSBTMjEgMTIgMjIgMTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzNGQjI3RiIgc3Ryb2tlLXdpZHRoPSIyLjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg%3D%3D&logoColor=3FB27F" alt="MATLAB">
+  <img src="https://img.shields.io/badge/Simulink-113524?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjM0ZCMjdGIiBzdHJva2Utd2lkdGg9IjIuMiIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI%2BPHJlY3QgeD0iMS41IiB5PSI3IiB3aWR0aD0iNyIgaGVpZ2h0PSIxMCIgcng9IjEuNSIvPjxyZWN0IHg9IjE1LjUiIHk9IjciIHdpZHRoPSI3IiBoZWlnaHQ9IjEwIiByeD0iMS41Ii8%2BPHBhdGggZD0iTTguNSAxMmg2TTEyIDkuNWwyLjUgMi41LTIuNSAyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg%3D%3D&logoColor=3FB27F" alt="Simulink">
+</p>
 
 Project for the **System Identification** course, Faculty of Automation and Computer Science, Technical University of Cluj-Napoca.
 
@@ -23,6 +30,8 @@ The names of folders 3–5 are placeholders and will be renamed once the methods
 ```
 .
 ├── README.md
+├── assets/
+│   └── banner.svg
 ├── 1.Regression_Method/
 │   ├── Docs/
 │   │   ├── RO/      # documentation in Romanian (.docx, .pdf)
